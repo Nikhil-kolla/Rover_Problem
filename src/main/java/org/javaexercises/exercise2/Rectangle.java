@@ -16,4 +16,9 @@ public class Rectangle {
 
     }
 
+    public int calculatePerimeter() {
+
+        return 2*(breadth+height);
+
+    }
 }

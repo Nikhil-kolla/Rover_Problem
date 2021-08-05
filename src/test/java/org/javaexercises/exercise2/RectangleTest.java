@@ -11,4 +11,10 @@ public class RectangleTest {
         assertEquals(20, rectangle.calculateArea());
     }
 
+    @Test
+    public void perimeter_Of_Rectangle_Should_Be_18_For_Width_5_Height_4() {
+        Rectangle rectangle = new Rectangle(5,4);
+        assertEquals(18, rectangle.calculatePerimeter());
+    }
+
 }
