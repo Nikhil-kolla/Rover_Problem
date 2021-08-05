@@ -4,7 +4,7 @@ public class CabRide {
     private static final int FARE_PER_KM = 10;
     private static final int FARE_PER_WAIT_MIN = 2;
     private static final int Min_Fare = 40;
-    private static int actualFare;
+    private int actualFare;
     private final int distanceTravelled;
     private final int waitTimeInMinutes;
 
@@ -14,8 +14,16 @@ public class CabRide {
     }
 
     public int fare() {
-        actualFare = ((distanceTravelled * FARE_PER_KM) + (waitTimeInMinutes * FARE_PER_WAIT_MIN));
+
+        actualFare= calculateActualFare(distanceTravelled, waitTimeInMinutes);
         return ((actualFare < Min_Fare ? Min_Fare : actualFare));
+
+    }
+
+    private int calculateActualFare(int distanceTravelled, int waitTimeInMinutes){
+
+        return ((distanceTravelled * FARE_PER_KM) + (waitTimeInMinutes * FARE_PER_WAIT_MIN));
+
     }
 }
 
