@@ -10,13 +10,13 @@ public class Rectangle {
         this.height = height;
     }
 
-    public int calculateArea() {
+    public int area() {
 
         return (breadth * height);
 
     }
 
-    public int calculatePerimeter() {
+    public int perimeter() {
 
         return 2*(breadth+height);
 
