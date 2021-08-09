@@ -3,10 +3,10 @@ package org.javaexercises.roboticRover;
 public class Rover {
 
     private final Plateau plateau;
-    private final CoordinatePoint currentPosition;
+    private final Coordinate currentPosition;
     private final Direction currentDirection;
 
-    Rover(Plateau plateau,CoordinatePoint currentPosition,Direction direction) {
+    Rover(Plateau plateau, Coordinate currentPosition, Direction direction) {
         this.plateau = plateau;
         this.currentPosition = currentPosition;
         this.currentDirection = direction;
@@ -15,7 +15,7 @@ public class Rover {
 
 
     public String move(String instructions) throws Exception {
-        CoordinatePoint dummyCurrentPosition = this.currentPosition;
+        Coordinate dummyCurrentPosition = this.currentPosition;
         Direction dummyDirection = this.currentDirection;
 
         System.out.print("Rover starting at : ");
