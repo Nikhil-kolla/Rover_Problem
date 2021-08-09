@@ -29,13 +29,6 @@ public class Direction {
         };
     }
 
-    public boolean checkForHorizontal() {
-        return directionInNumber == 1 || directionInNumber == 3;
-    }
-
-    public boolean checkForVertical() {
-        return directionInNumber == 0 || directionInNumber == 2;
-    }
 
     public boolean isWest() {
         return this.directionInNumber == 3;

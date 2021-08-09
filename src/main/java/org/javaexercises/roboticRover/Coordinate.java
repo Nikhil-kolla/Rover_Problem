@@ -1,6 +1,6 @@
 package org.javaexercises.roboticRover;
 
-public class Coordinate {
+public class Coordinate{
 
     private final int x, y;
 

@@ -14,20 +14,21 @@ public class Plateau {
                 this.topRightPoint.isCurrentPointLessThanTopRight(currentPoint);
     }
 
-
-    public boolean canXMoveTowardsEast(Coordinate currentPoint) {
-        return this.topRightPoint.canXMoveTowardsEast(currentPoint);
+    public boolean canRoverMoveTowardsEast(Coordinate currentPoint) {
+        return this.topRightPoint.canXMoveTowardsEast(currentPoint) && this.isCurrentPointValid(currentPoint);
     }
 
-    public boolean canXMoveTowardsWest(Coordinate currentPoint) {
-        return this.bottomLeftPoint.canXMoveTowardsWest(currentPoint);
+    public boolean canRoverMoveTowardsWest(Coordinate currentPoint) {
+        return this.bottomLeftPoint.canXMoveTowardsWest(currentPoint) && this.isCurrentPointValid(currentPoint);
     }
 
-    public boolean canYMoveTowardsNorth(Coordinate currentPoint) {
-        return this.topRightPoint.canYMoveTowardsNorth(currentPoint);
+    public boolean canRoverMoveTowardsNorth(Coordinate currentPoint) {
+        return this.topRightPoint.canYMoveTowardsNorth(currentPoint) && this.isCurrentPointValid(currentPoint);
     }
 
-    public boolean canYMoveTowardsSouth(Coordinate currentPoint) {
-        return this.bottomLeftPoint.canYMoveTowardsSouth(currentPoint);
+    public boolean canRoverMoveTowardsSouth(Coordinate currentPoint) {
+        return this.bottomLeftPoint.canYMoveTowardsSouth(currentPoint) && this.isCurrentPointValid(currentPoint);
     }
+
+
 }
